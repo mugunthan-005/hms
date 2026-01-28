@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Consent - SRM Hospital</title>
+  <link rel="stylesheet" href="consent.css" />
+</head>
+<body>
+  <div class="bg"></div>
+
+  <div class="card">
+    <h2 class="title">SRM Hospital</h2>
+    <p class="subtitle">Consent Recording</p>
+
+    <p class="hint">Patient ID: <span class="badge" id="pidText">-</span></p>
+
+    <div class="row">
+      <button class="btn" id="startBtn" type="button">Start Recording</button>
+      <button class="btn secondary" id="stopBtn" type="button" disabled>Stop</button>
+      <button class="btn" id="uploadBtn" type="button" disabled>Upload Consent</button>
+    </div>
+
+    <p class="hint">Allow camera + microphone + location when asked.</p>
+
+    <div class="videoWrap">
+      <div>
+        <p class="hint">Live Preview</p>
+        <video id="preview" autoplay muted playsinline></video>
+      </div>
+      <div>
+        <p class="hint">Recorded Video</p>
+        <video id="playback" controls playsinline></video>
+      </div>
+    </div>
+
+    <div class="status" id="status"></div>
+  </div>
+
+  <script src="consent.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Attender - SRM Hospital</title>
+  <link rel="stylesheet" href="attender.css" />
+</head>
+<body>
+  <div class="bg"></div>
+
+  <div class="card">
+    <h2 class="title">SRM Hospital</h2>
+    <p class="subtitle">Patient / Attender Registration</p>
+
+    <p class="hint">Fill details and upload ID proof to generate a <span class="badge">Patient ID</span>.</p>
+
+    <form id="patientForm" class="form" enctype="multipart/form-data">
+      <div class="grid">
+        <div>
+          <label>Patient Name</label>
+          <input name="patientName" placeholder="Patient Name" required />
+        </div>
+        <div>
+          <label>Age</label>
+          <input name="patientAge" type="number" placeholder="Age" min="0" max="120" required />
+
+        </div>
+
+        <div>
+          <label>Gender</label>
+          <input name="patientGender" placeholder="Gender" />
+        </div>
+        <div>
+          <label>Attender Name</label>
+          <input name="attenderName" placeholder="Attender Name" required />
+        </div>
+
+        <div style="grid-column: 1 / -1;">
+          <label>Relation</label>
+          <input name="attenderRelation" placeholder="Relation (e.g., Brother)" required />
+        </div>
+
+        <div style="grid-column: 1 / -1;">
+          <label>ID Proof (Image)</label>
+          <input type="file" name="idProof" accept="image/*" required />
+        </div>
+      </div>
+
+      <button class="btn" type="submit">Generate Patient ID</button>
+
+      <div class="row">
+        <span class="hint">After ID is generated you will go to Consent page.</span>
+        <span id="status" class="badge" style="display:none;">Working...</span>
+      </div>
+    </form>
+  </div>
+
+  <script src="attender.js"></script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<form id="consentForm" enctype="multipart/form-data">
+
+  <input type="text" name="patientName" placeholder="Patient Name" required />
+  <input type="text" name="patientId" placeholder="Patient ID" required />
+
+  <input type="text" name="attenderName" placeholder="Attender Name" required />
+  <input type="text" name="attenderRelation" placeholder="Relation" required />
+
+  <label>ID Proof (Photo)</label>
+  <input type="file" name="idProof" accept="image/*" required />
+
+  <label>Consent Video</label>
+  <input type="file" name="consentVideo" accept="video/*" required />
+
+  <button type="submit">Submit Consent</button>
+</form>
+
+<script src="attender-consent.js"></script>
