@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SRM Hospital - Login</title>
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+<body>
+  <div class="bg"></div>
+
+  <div class="card">
+    <h1 class="title">SRM Hospital</h1>
+    <p class="subtitle">Hospital Management System</p>
+
+    <form id="loginForm" class="form">
+      <label>Login As</label>
+      <select id="loginType" required>
+        <option value="" disabled selected>Select</option>
+        <option value="attender">Patient / Attender</option>
+        <option value="doctor">Doctor / Admin</option>
+      </select>
+
+      <label>Email</label>
+      <input id="email" type="email" placeholder="Enter email" required />
+
+      <label>Password</label>
+      <input id="password" type="password" placeholder="Enter password" required />
+
+      <button class="btn" type="submit">Login</button>
+    </form>
+
+    <p class="footer">© 2026 SRM Hospital</p>
+  </div>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>
